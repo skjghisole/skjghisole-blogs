@@ -1,20 +1,19 @@
-import '@babel/polyfill';
-import express from 'express'
-import mongoose: any from 'mongoose';
-import { ApolloServer } from 'apollo-server-express'
+import express from 'express';
+import mongoose from 'mongoose';
+import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
-import cors from 'cors'
+import cors from 'cors';
 
 
 
-const app = express()
+const app = express();
 
-app.use(cors())
+app.use(cors());
 
-const httpServer = createServer(app)
+const httpServer = createServer(app);
 
-const port = process.env.PORT || 1010
+const port = process.env.PORT || 1010;
 
 httpServer.listen(port, () => {
-	console.log(`Server started on http://localhost:${port}`)
+	console.log(`Server started on http://localhost:${port}`);
 })
